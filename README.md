@@ -18,6 +18,22 @@ Please compare pros and cons of the following options, and also describe when ea
 - Passing parameters using const references
 
 Answer:
+1) Passing by value
+Pros: Passing parameters by value actually copies the variable. It does not change the original varible when you make change of the new copy.
+Cons: Making a copy is a time-wasted and space-wasted action, especially when the memory space of the varible(i.e callee) is so large. 
+
+2) Passing by pointers 
+Pros: It avoids creating new memory space.
+Cons: It changes the original variable, which is not expected when we do not want to change the original variable.
+
+3) Passing by reference 
+Pros: It avoids creating new memory space.
+Cons: It changes the original variable, which is not expected when we do not want to change the original variable.
+
+4) Passing by const reference
+ Pros: It avoids making a copy, and it avoids changing the original variable.
+ Cons: It also means you cannot make any changes to the variable inside functions.
+
 
 ## Question 2 (20 Points. Easy)
 Part 1:
@@ -38,12 +54,14 @@ Snippet 1:
 Point p1;
 ```
 Answer:
+The default constructor will be called.
 
 Snippet 2:
 ```c++
 Point p1(5, 6);
 ```
 Answer:
+The parametered constructor will be called.
 
 Snippet 3:
 ```c++
@@ -51,6 +69,7 @@ Point p1(5, 6);
 Point p2=p1;
 ```
 Answer:
+The copy constructor will be called.
 
 Snippet 4:
 Assuming PrintPoint function is given as below:
@@ -60,6 +79,7 @@ Point p1;
 PrintPoint (p1);
 ```
 Answer:
+The default constructor and copy constructor will be called.
 
 Snippet 5:
 Assuming PrintPoint function is given as below:
@@ -69,6 +89,7 @@ Point p1;
 PrintPoint(p1);
 ```
 Answer:
+Only default constructor function will be called.
 
 Snippet 6:
 Assuming PrintPoint function is given as below:
@@ -78,15 +99,17 @@ Point p1;
 PrintPoint(p1);
 ```
 Answer:
+Only default constructor function will be called.
 
 Snippet 7:
 Assuming PrintPoint function is given as below:
 ```c++
 void PrintPoint(Point *p);
-Point *ptr;
+Point *ptr;//create a pointer pointing to the Point
 PrintPoint(ptr);
 ```
 Answer:
+No constructor functions will be called.
 
 Snippet 8:
 Assuming PrintPoint function is given as below:
@@ -97,6 +120,7 @@ ptr = new Point;
 PrintPoint(ptr);
 ```
 Answer:
+The default constructor will be called.
 
 ## Question 3 (20 Points. Easy)
 

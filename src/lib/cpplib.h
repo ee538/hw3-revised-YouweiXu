@@ -5,13 +5,12 @@
 #include <string>
 #include <vector>
 #include <set>
+#include <stack>
 #include <unordered_map>
 #include <iostream>
 
 using namespace std;
-/**
- *  Example class used for GTest demo
- */
+
 class CPPLib {
  public:
   //q3
@@ -28,8 +27,12 @@ private:
 public:	
     Point();	
     Point(int);	
-    Point(const Point&);	
-    ~Point();	
+    Point(const Point &p);	
+    ~Point();
+
+    int GetX() const {return x;};
+    int GetY() const {return y;};
+    	 	
 };
 
 // q4
