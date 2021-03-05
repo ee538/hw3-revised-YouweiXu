@@ -143,7 +143,7 @@ bazel test tests:q3_student_test
 ```
 Please compute the time complexity of your implementation.
 
-Answer:
+Answer:The sorting operation which have the elements in the vector put in the set container takes 0(nlog n). Also the while loop takes 0(n). Thus the total time complexity is O(nlog n).
 
 ## Question 4 (20 Points. Easy)
 
@@ -299,5 +299,6 @@ bazel test tests:q6_student_test
 ```
 Please compute the time complexity of your implementation.
 
-Answer:
+Answer:The for loop goes through all the lements in the string, whick takes time O(n). Inside the for loop, stack push and pop operation takes O(1). Also, Checking if the stack is empty takes O(1) as well.
+Thus the total run time complexity is O(n).
 
