@@ -2,6 +2,7 @@
 
 #include <map>
 #include <vector>
+#include<iomanip>
 
 #include "gtest/gtest.h"
 
@@ -41,9 +42,9 @@ TEST(Q5_Student, compare) {
 
 TEST(Q5_Student, mutiply) {
 
-  Complex c1(1,2);
+  Complex c1(2,7);
   Complex c2 = c1 * 3;
-  Complex c(3,6);
+  Complex c(6,21);
 
   std::vector<float> expected = {c.real, c.ima};
   std::vector<float> actual = {c2.real, c2.ima};  
@@ -51,7 +52,7 @@ TEST(Q5_Student, mutiply) {
   EXPECT_EQ(expected, actual);
 }
 
-TEST(Q5_Student, plusequal) {
+TEST(Q5_Student, plus_equal) {
 
   Complex c1(4.7,3.1);
   Complex c2(2.3,1);
@@ -65,7 +66,7 @@ TEST(Q5_Student, plusequal) {
   EXPECT_EQ(expected, actual);
 }
 
-TEST(Q5_Student, plusequalfloat) {
+TEST(Q5_Student, pluse_qual_float) {
 
   Complex c1(4.3,3);
   Complex c2 = (c1 += 1);

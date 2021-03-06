@@ -116,7 +116,7 @@ Complex::Complex(const Complex &cmp){
     real = cmp.real;
     ima = cmp.ima;
 }
-// implement an assignment operator
+//implement an assignment operator
 Complex& Complex::operator=(const Complex &cmp){
     real = cmp.real;
     ima = cmp.ima;
