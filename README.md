@@ -69,7 +69,7 @@ Point p1(5, 6);
 Point p2=p1;
 ```
 Answer:
-The copy constructor will be called.
+The parametered constructor and copy constructor will be called.
 
 Snippet 4:
 Assuming PrintPoint function is given as below:
